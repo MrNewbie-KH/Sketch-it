@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(to right, #201c38, #d85c49e4);
+  background-image: linear-gradient(to right, #1b1732, #eabdb6);
 }
 .container {
   display: flex;
@@ -103,5 +103,5 @@ footer {
 footer a {
   font-size: 14px;
   text-decoration: none;
-  color: #2c2b2b;
+  color: #2c2b2b55;
 }
