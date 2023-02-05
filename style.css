@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(to right, #201c38, #eabdb6);
+  background-image: linear-gradient(to right, #201c38, #d85c49e4);
 }
 .container {
   display: flex;
