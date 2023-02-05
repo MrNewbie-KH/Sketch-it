@@ -8,6 +8,7 @@
   flex-direction: column;
   gap: 30px;
   justify-content: space-around;
+  background-color: blueviolet;
 }
 .logo {
   text-align: center;
@@ -16,9 +17,9 @@
 }
 .main-container {
   display: flex;
-  border: 5px dotted red;
-  height: 575px;
-  width: 575px;
+  border: 5px solid red;
+  height: 85vh;
+  width: 724px;
   margin: 0 auto;
   border-radius: 50px;
 }
@@ -30,6 +31,7 @@
   align-items: center;
 }
 .grid-pallete {
+  margin: 30px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -45,10 +47,10 @@
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
-  border: 5px solid black;
+  border: 0.1px solid rgba(218, 216, 216, 0.637);
 }
 .cell {
-  border: 2px solid green;
+  border: 0.1px solid rgba(218, 216, 216, 0.637);
 }
 #colorpicker {
   all: revert;
