@@ -51,12 +51,14 @@ eraserBtn.addEventListener("click", function () {
 const randomize = function () {
   return Math.floor(Math.random() * 255) + 1;
 };
+
 // randomize color
 const randomizeColor = function () {
   colorBtn.value = `#${randomize().toString(16)}${randomize().toString(
     16
   )}${randomize().toString(16)}`;
   color = colorBtn.value;
+  for (let i = color.length; i < 7; i++) color += "0";
 };
 
 // functionality when clicking rainbow button
@@ -78,7 +80,11 @@ clearBtn.addEventListener("click", () => {
   createGrid(numberOfCol, numberOfRow);
   gridSize.textContent = `Grid ${numberOfCol} x ${numberOfRow}`;
 });
-
+// functionality when chainging color from color picker
+colorBtn.addEventListener("change", function () {
+  isRainbow = false;
+  color = colorBtn.value;
+});
 // functionality when sliding the slider
 slider.addEventListener("change", function () {
   slidervalue = slider.value;
@@ -89,3 +95,9 @@ slider.addEventListener("change", function () {
   gridSize.textContent = `Grid ${numberOfCol} x ${numberOfRow}`;
 });
 // ==============================================================================
+window.addEventListener("mousemove", function (e) {
+  if (e.target.classList.contains("cell") && e.buttons === 1) {
+    if (isRainbow) randomizeColor();
+    e.target.style.backgroundColor = `${color}`;
+  }
+});
